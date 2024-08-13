@@ -17,10 +17,6 @@ body {
   flex: 1;
 }
 
-.bg-dark {
-  background-color: #12002b;
-}
-
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
@@ -80,6 +76,34 @@ body {
   @media (min-width: 920px) {
     margin-bottom: 0px;
   }
+}
+
+.container-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-account-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.account-logo {
+  width: 40px;
+}
+
+.log-button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #ff5757;
+  background-color: #ff5757;
+  color: #fff;
+  cursor: pointer;
 }
 
 .hero {
@@ -166,7 +190,7 @@ body {
 }
 
 .sign-in {
-  width: 50%;
+  width: 30%;
   margin: 50px auto;
 }
 
@@ -180,6 +204,9 @@ body {
   border-color: #00bc77;
   background-color: #00bc77;
   color: #fff;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .sign-in-content {
@@ -193,6 +220,20 @@ body {
 
 .sign-in-icon {
   font-size: 5rem;
+}
+
+.input-container {
+  /* margin: 0 auto; */
+  display: flex;
+  /* gap: 5em; */
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  font-size: 20px;
+}
+
+input {
+  font-size: 20px;
 }
 
 .input-remember {
@@ -238,6 +279,19 @@ body {
 .footer-text {
   margin: 0;
   padding: 0;
+}
+
+.account-form {
+  display: grid;
+  gap: 2em;
+  border: 2px solid black;
+  width: 40%;
+  margin: 2em auto;
+  padding: 2em;
+}
+
+.form-buttons {
+  display: flex;
 }
 
 .account {
@@ -300,6 +354,11 @@ body {
   border-color: #00bc77;
   background-color: #00bc77;
   color: #fff;
+  margin: 3em auto;
+}
+
+.transaction-button:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 720px) {

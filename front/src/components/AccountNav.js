@@ -1,10 +1,13 @@
 // IMPORTS
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 
+import accountLogo from "../assets/account.svg";
+
 function AccountNav() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const token = useSelector((state) => state.auth.token);
   const username = useSelector((state) => state.name.username);
@@ -13,6 +16,7 @@ function AccountNav() {
     dispatch({
       type: "LOGOUT",
     });
+    navigate("/");
   };
 
   useEffect(() => {
@@ -57,14 +61,20 @@ function AccountNav() {
   return (
     <>
       {username ? (
-        <div className="cont-user">
-          <button className="btn-user" onClick={handleLogout}>
+        <div className="cont-user container-user">
+          <NavLink className="btn-user " to="/user">
+            <div className="user-account-container">
+              <img
+                src={accountLogo}
+                alt="account logo"
+                className="account-logo"
+              />
+              <p>{username}</p>
+            </div>
+          </NavLink>
+          <button className="btn-user log-button" onClick={handleLogout}>
             Logout
           </button>
-          <NavLink className="btn-user" to="/user">
-            <i className="fas fa-user-circle"></i>
-            <p>{username}</p>
-          </NavLink>
         </div>
       ) : (
         <div className="cont-user">

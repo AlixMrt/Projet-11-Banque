@@ -78,23 +78,31 @@ function EditUser() {
 
       {showForm && (
         <form className="account-form" onSubmit={handleSubmit}>
-          <label>First Name:</label>
-          <input type="text" value={firstname} disabled />
-
-          <label>Last Name:</label>
-          <input type="text" value={lastname} disabled />
-
-          <label>New Username:</label>
-          <input
-            type="text"
-            value={newUsername}
-            onChange={handleInputChange}
-            required
-          />
-
-          <button type="submit" className="transaction-button button">
-            Confirm
-          </button>
+          <div className="input-container">
+            <label>First Name:</label>
+            <input type="text" value={firstname} disabled />
+          </div>
+          <div className="input-container">
+            <label>Last Name:</label>
+            <input type="text" value={lastname} disabled />
+          </div>
+          <div className="input-container">
+            <label>Username:</label>
+            <input
+              type="text"
+              value={newUsername}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="form-buttons">
+            <button type="submit" className="transaction-button button">
+              Confirm
+            </button>
+            <button className="transaction-button button" onClick={toggleForm}>
+              Cancel
+            </button>
+          </div>
         </form>
       )}
     </>
