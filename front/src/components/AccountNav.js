@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 
 import accountLogo from "../assets/account.svg";
+import userLogo from "../assets/userLogo.svg";
 
 function AccountNav() {
   const dispatch = useDispatch();
@@ -78,8 +79,11 @@ function AccountNav() {
         </div>
       ) : (
         <div className="cont-user">
-          <NavLink className="btn-user" to="/sign-in">
-            <p>Sign In</p>
+          <NavLink className="btn-user " to="/sign-in">
+            <div className="user-account-container">
+              <img src={userLogo} alt="account logo" className="account-logo" />
+              <p>Sign In</p>
+            </div>
           </NavLink>
         </div>
       )}

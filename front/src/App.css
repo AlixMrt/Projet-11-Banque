@@ -190,8 +190,10 @@ body {
 }
 
 .sign-in {
-  width: 30%;
-  margin: 50px auto;
+  /* margin: 50px auto; */
+  height: 70vh;
+  background-color: rgb(19 0 43);
+  padding: 4em;
 }
 
 .sign-in-button {
@@ -205,7 +207,7 @@ body {
   background-color: #00bc77;
   color: #fff;
   cursor: pointer;
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -213,13 +215,20 @@ body {
   box-sizing: border-box;
   background-color: white;
   width: 300px;
-  margin: 0 auto;
-  margin-top: 3rem;
   padding: 2rem;
+  margin: 2em auto;
+  display: flex;
+  gap: 0.6em;
+  flex-direction: column;
+}
+
+.heading-1 {
+  font-weight: 900;
 }
 
 .sign-in-icon {
-  font-size: 5rem;
+  width: 40px;
+  margin: 0 auto;
 }
 
 .input-container {

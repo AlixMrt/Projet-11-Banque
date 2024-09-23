@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
+import userLogo from "../assets/userLogo.svg";
+
 function SignIn() {
   const dispatch = useDispatch();
 
@@ -69,7 +71,9 @@ function SignIn() {
   return (
     <main>
       <section className="sign-in">
-        <form onSubmit={handleSignIn}>
+        <form className="sign-in-content" onSubmit={handleSignIn}>
+          <img src={userLogo} className="sign-in-icon" alt="sign-in logo" />
+          <h1 className="heading-1">Sign In</h1>
           <div className="input-wrapper">
             <label htmlFor="username">Email</label>
             <input
