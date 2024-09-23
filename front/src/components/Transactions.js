@@ -24,12 +24,13 @@ export default function Transactions() {
     <>
       <h2 className="sr-only">Accounts</h2>
 
-      {transactionsArray.map((account) => {
+      {transactionsArray.map((account, index) => {
         return (
           <Transaction
             accountTitle={account.accountTitle}
             accountAmount={account.accountAmount}
             accountStatus={account.accountStatus}
+            key={account.accountAmount + index}
           />
         );
       })}

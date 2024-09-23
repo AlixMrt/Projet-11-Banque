@@ -4,7 +4,7 @@ import EditUser from "../components/EditUser";
 
 export default function UserPage() {
   return (
-    <main className="main ">
+    <main className="main user">
       <EditUser />
       <Transactions />
     </main>

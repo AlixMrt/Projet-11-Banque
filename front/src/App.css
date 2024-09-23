@@ -81,6 +81,16 @@ body {
 .container-user {
   display: flex;
   flex-direction: column;
+  gap: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+
+  @media (min-width: 920px) {
+    gap: 2em;
+    flex-direction: row;
+  }
 }
 
 .user-account-container {
@@ -99,7 +109,6 @@ body {
   padding: 8px;
   font-size: 1.1rem;
   font-weight: bold;
-  margin-top: 1rem;
   border-color: #ff5757;
   background-color: #ff5757;
   color: #fff;
@@ -232,13 +241,15 @@ body {
 }
 
 .input-container {
-  /* margin: 0 auto; */
   display: flex;
-  /* gap: 5em; */
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
   font-size: 20px;
+  flex-direction: column;
+  @media (min-width: 720px) {
+    flex-direction: row;
+  }
 }
 
 input {
@@ -291,16 +302,35 @@ input {
 }
 
 .account-form {
+  background-color: white;
   display: grid;
   gap: 2em;
   border: 2px solid black;
-  width: 40%;
+  width: 100%;
   margin: 2em auto;
-  padding: 2em;
+  padding: 1em;
+
+  @media (min-width: 720px) {
+    width: 40%;
+    padding: 4 em;
+  }
 }
 
 .form-buttons {
   display: flex;
+}
+
+.user {
+  background-color: rgb(19 0 43);
+  padding: 4em;
+}
+
+.account-header {
+  color: white;
+}
+
+.account-header-heading {
+  font-size: 3rem;
 }
 
 .account {
@@ -309,13 +339,18 @@ input {
   align-items: center;
   border: 1px solid black;
   background-color: #fff;
-  width: 80%;
+
   margin: 0 auto;
   flex-direction: column;
   padding: 1.5rem;
   box-sizing: border-box;
   text-align: left;
   margin-bottom: 2rem;
+  width: 100%;
+
+  @media (min-width: 720px) {
+    width: 60%;
+  }
 }
 
 .account-amount {
@@ -355,7 +390,6 @@ input {
 
 .transaction-button {
   display: block;
-  width: 100%;
   padding: 8px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -370,7 +404,7 @@ input {
   cursor: pointer;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1100px) {
   .account {
     flex-direction: row;
   }

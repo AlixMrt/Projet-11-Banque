@@ -65,13 +65,13 @@ function EditUser() {
   return (
     <>
       <section className="account-header">
-        <h1>
-          Welcome back, {firstname} {lastname}!
+        <h1 className="account-header-heading">
+          Welcome back <br /> {firstname} {lastname}!
         </h1>
 
         {!showForm && (
           <button className="transaction-button button" onClick={toggleForm}>
-            Edit your name
+            Edit name
           </button>
         )}
       </section>
