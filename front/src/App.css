@@ -323,6 +323,9 @@ input {
 .user {
   background-color: rgb(19 0 43);
   padding: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .account-form {
