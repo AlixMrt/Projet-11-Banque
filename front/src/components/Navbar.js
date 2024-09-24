@@ -15,7 +15,6 @@ export default function Navbar() {
         />
         <h1 className="sr-only">Argent Bank</h1>
       </NavLink>
-
       <AccountNav />
     </nav>
   );
